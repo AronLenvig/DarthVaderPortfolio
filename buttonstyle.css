@@ -1,0 +1,57 @@
+
+.button-wrapper {
+  position: relative;
+  padding: 10px;
+  width: 240px;
+  height: 60px;
+  text-align: center;
+}
+
+.rectangle {
+  stroke-width: 8px;
+  stroke: #d41037;
+  fill: transparent;
+  /* Core part of the animation */
+  stroke-dasharray: 100 500;
+  stroke-dashoffset: -372;
+}
+
+.btn {
+  color: #12d66d;
+  font-size: 18px;
+  letter-spacing: 6px;
+  position: relative;
+  top: -48px;
+  text-decoration: none;
+}
+
+@keyframes extend {
+  to {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 0;
+    stroke-width: 2;
+  }
+}
+
+.button-wrapper:hover .rectangle {
+  animation: 0.5s extend linear forwards;
+}
+
+/* if reverse animation is needed, use transition instead of keyframes */
+
+/* .rectangle {
+  stroke-width: 8px;
+  stroke: #ff6348;
+  fill: transparent;
+  stroke-dasharray: 100 500;
+  stroke-dashoffset: -372;
+  transition-property: all;
+  transition-duration: 0.5s;
+} */
+/* 
+.button-wrapper:hover .rectangle {
+
+  stroke-dasharray: 600;
+  stroke-dashoffset: 0;
+  stroke-width: 2;
+} */

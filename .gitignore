@@ -1,0 +1,6 @@
+#gitignore all images .png .jpg .jpeg .gif .ico
+*.png
+*.jpg
+*.jpeg
+
+

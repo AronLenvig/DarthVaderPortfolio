@@ -1,0 +1,168 @@
+
+main {
+  scroll-snap-type: y mandatory;
+  scroll-padding: 80px;
+  overflow: scroll;
+  height: 100vh;
+  }   
+  
+section {
+  max-width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+  }
+
+body {
+  background: black url("starsbackground.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+.container {
+  /* display: flex; */
+  /* align-items: center; */
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+}
+
+.logo_text {
+  font-family: "PingFang SC";
+  font-size: 7vw;
+  fill: none;
+  stroke: url("#geekColor");
+  stroke-width: 1;
+  stroke-dasharray: 10 800;
+  stroke-dashoffset: 100;
+  animation: 5s linear 0s drawing forwards;
+  text-anchor: "middle";
+}
+
+@keyframes drawing {
+  to {
+    stroke-dasharray: 800;
+    stroke-dashoffset: 0;
+  }
+}
+
+.responsive-image {
+  max-width: 100%; /* Make the image width adjust to the container */
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* This creates 2 columns each occupying an equal fraction of the available space */
+  grid-template-rows: 1fr 1fr; /* This creates 2 rows each occupying an equal fraction of the available space */
+  gap: 10px; /* Gap between grid items */
+}
+
+.grid-item {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+li {
+  list-style: none;
+  color: #d2dae2;
+  font-size: 18px;
+  margin: 48px 0;
+  position: relative;
+}
+
+li::before,
+li::after {
+  content: "";
+  display: block;
+  height: 16px;
+  width: 100%;
+  background-color: #1f4a59;
+  position: absolute;
+  bottom: -28px;
+  border-radius: 6px;
+}
+
+li::before {
+  box-shadow: 0 0 6px rgba(75, 207, 250, 0.2);
+}
+
+li::after {
+  background-image: linear-gradient(90deg, #0fbcf9, #34e7e4);
+}
+
+li::after {
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.LightsaberCombat::after {
+  animation-name: LightsaberCombat;
+}
+
+.ForceAbilities::after {
+  animation-name: ForceAbilities;
+}
+
+.PilotingSkills::after {
+  animation-name: PilotingSkills;
+}
+
+.TacticalLeadership::after {
+  animation-name: TacticalLeadership;
+}
+
+.IntimidationandInterrogation::after {
+  animation-name: IntimidationandInterrogation;
+}
+
+@keyframes LightsaberCombat {
+  from {
+    width: 0;
+  }
+  to {
+    width: 95%;
+  }
+}
+
+@keyframes ForceAbilities {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes PilotingSkills {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes TacticalLeadership {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes IntimidationandInterrogation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
