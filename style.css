@@ -13,14 +13,23 @@ section {
   }
 
 body {
-  background: black url("starsbackground.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: black url("starsbackground.jpg") no-repeat center center fixed;
     background-size: cover;
     color: white;
     font-family: Arial, sans-serif;
   }
+
+.textbox {
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* white with 10% opacity */
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  width: fit-content;
+}
 
 .container {
   /* display: flex; */
@@ -28,6 +37,20 @@ body {
   justify-content: center;
   height: 100vh;
   width: 100vw;
+  flex-direction: column;
+}
+
+#DarthVaderSkills {
+  background-image: url("darthvadercombat.png");
+  background-repeat: no-repeat;
+}
+
+#Information_section
+{
+  /* center this */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -63,7 +86,6 @@ body {
 }
 
 .grid-item {
-  border: 1px solid black;
   padding: 20px;
 }
 
@@ -121,6 +143,14 @@ li::after {
   animation-name: IntimidationandInterrogation;
 }
 
+a img {
+  transition: transform 0.3s ease;
+}
+
+a:hover img {
+  transform: scale(1.2);
+}
+
 @keyframes LightsaberCombat {
   from {
     width: 0;
@@ -153,7 +183,7 @@ li::after {
     width: 0;
   }
   to {
-    width: 70%;
+    width: 80%;
   }
 }
 
@@ -162,7 +192,7 @@ li::after {
     width: 0;
   }
   to {
-    width: 60%;
+    width: 90%;
   }
 }
 
